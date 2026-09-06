@@ -1,0 +1,13 @@
+/*
+ * Copyright (c) 2026 MOZAGA FOUNDATION.
+ * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Spectra-Commercial
+ * See LICENSE.md, LICENSE-AGPL-3.0.txt, and LICENSE-COMMERCIAL.md for details.
+ */
+
+"NSBluetoothAlwaysUsageDescription" = "Spectra menggunakan Bluetooth untuk mengirim dan menerima pesan terenkripsi saat Anda offline atau berada di dekat kontak.";
+"NSBluetoothPeripheralUsageDescription" = "Spectra menggunakan Bluetooth agar kontak di sekitar dapat menemukan Anda dan mengirim pesan.";
+"NSCameraUsageDescription" = "Izinkan Spectra mengakses kamera Anda untuk memindai kode QR dan melakukan panggilan video.";
+"NSFaceIDUsageDescription" = "Izinkan Spectra menggunakan Face ID untuk pembukaan kunci yang aman.";
+"NSMicrophoneUsageDescription" = "Izinkan Spectra mengakses mikrofon Anda untuk panggilan suara dan video.";
+"NSPhotoLibraryUsageDescription" = "Spectra menggunakan foto dari perpustakaan Anda agar Anda dapat mengirimkannya di obrolan, mengatur foto profil atau grup, memilih latar belakang obrolan kustom, atau lampirkan tangkapan layar saat melaporkan masalah. Misalnya, Anda dapat memilih foto dari perpustakaan untuk dikirim dalam percakapan.";
+"NSPhotoLibraryAddUsageDescription" = "Spectra menyimpan gambar ke perpustakaan foto Anda saat Anda mengunduh foto dari obrolan. Misalnya, Anda dapat menyimpan gambar yang diterima ke Foto agar tetap ada di perangkat ini.";

@@ -1,0 +1,9 @@
+/*
+ * Copyright (c) 2026 MOZAGA FOUNDATION.
+ * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Spectra-Commercial
+ * See LICENSE.md, LICENSE-AGPL-3.0.txt, and LICENSE-COMMERCIAL.md for details.
+ */
+
+"share_extension.title" = "Spectra में साझा करें";
+"share_extension.preparing_private_handoff" = "निजी हस्तांतरण तैयार किया जा रहा है...";
+"share_extension.import_failed" = "Spectra इस आइटम को आयात नहीं कर सका।";

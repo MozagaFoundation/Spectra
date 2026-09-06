@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+  <base-config cleartextTrafficPermitted="false">
+    <trust-anchors>
+      <certificates src="system" />
+    </trust-anchors>
+  </base-config>
+
+  <domain-config>
+    <domain includeSubdomains="false">exp.host</domain>
+    <pin-set expiration="2028-12-31">
+      <pin digest="SHA-256">NjTFN+cuVQdG4sSgGP/BynQbh1htjPmmdf5x2X6Boes=</pin>
+      <pin digest="SHA-256">OdSlmQD9NWJh4EbcOHBxkhygPwNSwA9Q91eounfbcoE=</pin>
+    </pin-set>
+  </domain-config>
+
+  <domain-config cleartextTrafficPermitted="true">
+    <domain includeSubdomains="false">localhost</domain>
+    <domain includeSubdomains="false">127.0.0.1</domain>
+    <domain includeSubdomains="false">10.0.2.2</domain>
+  </domain-config>
+</network-security-config>

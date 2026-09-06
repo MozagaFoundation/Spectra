@@ -1,0 +1,197 @@
+name: Production Readiness
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  supply-chain-policy:
+    name: Supply-chain policy
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Verify pinned inputs and lock metadata
+        run: python3 scripts/verify-supply-chain.py
+      - name: Verify dependency license policy
+        run: python3 scripts/verify-dependency-licenses.py
+      - name: Run supply-chain policy tests
+        run: python3 -m unittest discover -s scripts -p 'test_*.py'
+
+  supabase-database:
+    name: Supabase migration replay and lint
+    runs-on: ubuntu-24.04
+    needs:
+      - supply-chain-policy
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with:
+          node-version: 20.19.4
+          cache: npm
+      - run: npm ci --no-audit --no-fund
+      - name: Replay migrations twice and lint database
+        run: |
+          trap 'npm run supabase:stop >/dev/null 2>&1 || true' EXIT
+          npm run supabase:start >/dev/null
+          npm run supabase:db:replay
+          npm run supabase:db:lint
+          npm run supabase:db:test
+          npm run supabase:db:replay
+          npm run supabase:db:lint
+          npm run supabase:db:test
+      - run: git diff --exit-code
+
+  mobile:
+    name: Mobile clean install
+    runs-on: ubuntu-24.04
+    needs:
+      - supply-chain-policy
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with:
+          node-version: 20.19.4
+          cache: npm
+      - run: npm ci --no-audit --no-fund
+      - run: npm run typecheck
+      - run: npm test -- --run services/backend/walletIndex.test.ts services/backend/auth.test.ts services/backend/objectStorage.test.ts services/crypto/portfolioBalances.test.ts
+      - name: Verify reproducible production mobile export
+        run: bash scripts/verify-reproducible-mobile-export.sh mobile-reproducibility.json
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: mobile-reproducibility
+          path: mobile-reproducibility.json
+          if-no-files-found: error
+          retention-days: 30
+      - run: git diff --exit-code
+
+  mobile-release-config:
+    name: Mobile release configuration
+    runs-on: macos-15
+    needs:
+      - supply-chain-policy
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with:
+          node-version: 20.19.4
+          cache: npm
+      - run: npm ci --no-audit --no-fund
+      - name: Verify fail-closed release configuration
+        run: |
+          npm run verify:release-config
+          npm run verify:ios-privacy
+          npm run verify:public-config
+      - run: git diff --exit-code
+
+  supabase-edge:
+    name: Deno Edge checks and contracts
+    runs-on: ubuntu-24.04
+    needs:
+      - supply-chain-policy
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with:
+          node-version: 20.19.4
+      - uses: denoland/setup-deno@22d081ff2d3a40755e97629de92e3bcbfa7cf2ed # v2.0.5
+        with:
+          deno-version: v2.9.4
+      - name: Check Edge modules and offline contracts
+        run: npm run supabase:deploy:validate
+      - run: git diff --exit-code
+
+  source-security:
+    name: Config, dependencies, and SBOM
+    runs-on: ubuntu-24.04
+    needs:
+      - supply-chain-policy
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with:
+          node-version: 20.19.4
+          cache: npm
+      - uses: denoland/setup-deno@22d081ff2d3a40755e97629de92e3bcbfa7cf2ed # v2.0.5
+        with:
+          deno-version: v2.9.4
+      - run: npm ci --no-audit --no-fund
+      - name: Validate config and suppression policy
+        run: |
+          python3 scripts/verify-security-allowlist.py
+          npm run verify:public-config
+      - name: Audit npm and Deno dependencies
+        run: |
+          python3 scripts/verify-npm-audit.py
+          deno audit --level=high --lock=supabase/functions/deno.lock
+      - name: Generate npm SBOM
+        run: |
+          mkdir -p supply-chain-artifacts
+          npm sbom --sbom-format cyclonedx > supply-chain-artifacts/npm-sbom.cdx.json
+      - name: Gate SBOM license metadata
+        run: >-
+          python3 scripts/verify-dependency-licenses.py
+          --sbom supply-chain-artifacts/npm-sbom.cdx.json
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: npm-sbom
+          path: supply-chain-artifacts/npm-sbom.cdx.json
+          if-no-files-found: error
+          retention-days: 30
+
+  codeql:
+    name: CodeQL SAST
+    runs-on: ubuntu-24.04
+    needs:
+      - supply-chain-policy
+    permissions:
+      contents: read
+      security-events: write
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with:
+          node-version: 20.19.4
+          cache: npm
+      - uses: github/codeql-action/init@e5d2f324924c57b6cabef9bdd7a1c85d62a89be2 # v3.37.0
+        with:
+          languages: javascript-typescript
+          queries: security-extended
+      - name: Build analyzed sources
+        run: |
+          npm ci --no-audit --no-fund
+          npm run typecheck
+      - uses: github/codeql-action/analyze@e5d2f324924c57b6cabef9bdd7a1c85d62a89be2 # v3.37.0
+
+  deploy-validation:
+    name: Safe Supabase deploy validation
+    runs-on: ubuntu-24.04
+    needs:
+      - supply-chain-policy
+      - supabase-database
+      - supabase-edge
+      - mobile
+      - mobile-release-config
+      - source-security
+      - codeql
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with:
+          node-version: 20.19.4
+          cache: npm
+      - uses: denoland/setup-deno@22d081ff2d3a40755e97629de92e3bcbfa7cf2ed # v2.0.5
+        with:
+          deno-version: v2.9.4
+      - run: npm ci --no-audit --no-fund
+      - name: Validate deploy inputs without remote access
+        run: |
+          npm exec -- supabase --version
+          npm run supabase:deploy:validate
+          python3 scripts/verify-supply-chain.py
+      - run: git diff --exit-code

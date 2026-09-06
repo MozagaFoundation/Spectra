@@ -1,0 +1,9 @@
+{
+  "NSBluetoothAlwaysUsageDescription": "Spectra utilise le Bluetooth pour envoyer et recevoir des messages chiffrés lorsque vous êtes hors ligne ou à proximité de vos contacts.",
+  "NSBluetoothPeripheralUsageDescription": "Spectra utilise le Bluetooth pour permettre aux contacts à proximité de vous détecter et de vous envoyer des messages.",
+  "NSCameraUsageDescription": "Autorisez Spectra à accéder à votre caméra pour scanner des codes QR et passer des appels vidéo.",
+  "NSFaceIDUsageDescription": "Autorisez Spectra à utiliser Face ID pour un déverrouillage sécurisé.",
+  "NSMicrophoneUsageDescription": "Autorisez Spectra à accéder à votre microphone pour les appels vocaux et vidéo.",
+  "NSPhotoLibraryUsageDescription": "Spectra utilise les photos de votre bibliothèque pour que vous puissiez les envoyer dans les discussions, définir une photo de profil ou de groupe, choisir un arrière-plan de discussion personnalisé ou joindre des captures d’écran lors du signalement d’un problème. Par exemple, vous pouvez choisir une photo de votre bibliothèque pour l’envoyer dans une conversation.",
+  "NSPhotoLibraryAddUsageDescription": "Spectra enregistre des images dans votre photothèque lorsque vous téléchargez une photo depuis une discussion. Par exemple, vous pouvez enregistrer une image reçue dans Photos pour la conserver sur cet appareil."
+}

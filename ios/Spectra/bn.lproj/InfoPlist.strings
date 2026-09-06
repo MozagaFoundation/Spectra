@@ -1,0 +1,13 @@
+/*
+ * Copyright (c) 2026 MOZAGA FOUNDATION.
+ * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Spectra-Commercial
+ * See LICENSE.md, LICENSE-AGPL-3.0.txt, and LICENSE-COMMERCIAL.md for details.
+ */
+
+"NSBluetoothAlwaysUsageDescription" = "আপনি অফলাইনে থাকলে বা পরিচিতদের কাছাকাছি থাকলে Spectra এনক্রিপ্টেড বার্তা পাঠানো ও গ্রহণ করার জন্য ব্লুটুথ ব্যবহার করে।";
+"NSBluetoothPeripheralUsageDescription" = "Spectra ব্লুটুথ ব্যবহার করে যাতে কাছাকাছি থাকা পরিচিতরা আপনাকে খুঁজে পেয়ে বার্তা পাঠাতে পারে।";
+"NSCameraUsageDescription" = "QR কোড স্ক্যান এবং ভিডিও কলের জন্য Spectra-কে আপনার ক্যামেরা ব্যবহারের অনুমতি দিন।";
+"NSFaceIDUsageDescription" = "নিরাপদ আনলকের জন্য Spectra-কে Face ID ব্যবহার করার অনুমতি দিন।";
+"NSMicrophoneUsageDescription" = "ভয়েস ও ভিডিও কলের জন্য Spectra-কে আপনার মাইক্রোফোন ব্যবহারের অনুমতি দিন।";
+"NSPhotoLibraryUsageDescription" = "Spectra আপনার লাইব্রেরির ছবি ব্যবহার করে যাতে আপনি সেগুলো চ্যাটে পাঠাতে, প্রোফাইল বা গ্রুপ ফটো সেট করতে, কাস্টম চ্যাট ব্যাকগ্রাউন্ড বেছে নিতে, বা সমস্যা রিপোর্ট করার সময় স্ক্রিনশট সংযুক্ত করতে পারেন। উদাহরণস্বরূপ, আপনি একটি কথাবার্তায় পাঠাতে আপনার লাইব্রেরি থেকে একটি ছবি বেছে নিতে পারেন।";
+"NSPhotoLibraryAddUsageDescription" = "আপনি চ্যাট থেকে একটি ছবি ডাউনলোড করলে Spectra সেটি আপনার ফটো লাইব্রেরিতে সংরক্ষণ করে। উদাহরণস্বরূপ, আপনি এই ডিভাইসে রাখতে একটি প্রাপ্ত ছবি Photos-এ সংরক্ষণ করতে পারেন।";

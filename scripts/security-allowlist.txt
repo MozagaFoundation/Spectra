@@ -1,0 +1,15 @@
+# Security scanner allowlist policy
+#
+# Default: no suppressions. A scanner finding must be fixed or fail CI.
+# Exception format (one per line):
+# scanner|rule_or_cve|repo_relative_path|expires_yyyy-mm-dd|owner|risk_acceptance_ticket
+#
+# Exceptions must be narrowly scoped, expire within 90 days, identify an owner,
+# link an approved risk-acceptance ticket, and be configured in the named scanner.
+# The npm audit gate consumes active npm-audit entries; other scanners require
+# their own explicit exception configuration.
+
+# Temporary user-authorized exception: Metro's current image-size dependency has
+# no patched upstream release. Revisit when Expo/Metro resolves the dependency.
+npm-audit|GHSA-w3rx-r6r6-pgpr|package-lock.json|2026-09-17|MozagaFoundation|RISK-2026-08-IMAGE-SIZE
+npm-audit|GHSA-5p2g-fcmc-qvqq|package-lock.json|2026-09-17|MozagaFoundation|RISK-2026-08-IMAGE-SIZE

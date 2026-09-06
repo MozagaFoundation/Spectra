@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>CADisableMinimumFrameDurationOnPhone</key>
+    <true/>
+    <key>CFBundleDevelopmentRegion</key>
+    <string>$(DEVELOPMENT_LANGUAGE)</string>
+    <key>CFBundleDisplayName</key>
+    <string>Spectra</string>
+    <key>CFBundleExecutable</key>
+    <string>$(EXECUTABLE_NAME)</string>
+    <key>CFBundleIdentifier</key>
+    <string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+    <key>CFBundleInfoDictionaryVersion</key>
+    <string>6.0</string>
+    <key>CFBundleName</key>
+    <string>$(PRODUCT_NAME)</string>
+    <key>CFBundlePackageType</key>
+    <string>$(PRODUCT_BUNDLE_PACKAGE_TYPE)</string>
+    <key>CFBundleShortVersionString</key>
+    <string>$(MARKETING_VERSION)</string>
+    <key>CFBundleSignature</key>
+    <string>????</string>
+    <key>CFBundleURLTypes</key>
+    <array>
+      <dict>
+        <key>CFBundleURLSchemes</key>
+        <array>
+          <string>spectra</string>
+        </array>
+      </dict>
+    </array>
+    <key>CFBundleVersion</key>
+    <string>1</string>
+    <key>ITSAppUsesNonExemptEncryption</key>
+    <false/>
+    <key>LSRequiresIPhoneOS</key>
+    <true/>
+    <key>NSAppTransportSecurity</key>
+    <dict>
+      <key>NSAllowsArbitraryLoads</key>
+      <false/>
+      <key>NSAllowsLocalNetworking</key>
+      <true/>
+    </dict>
+    <key>TSKConfiguration</key>
+    <dict>
+      <key>TSKPinnedDomains</key>
+      <dict>
+        <key>exp.host</key>
+        <dict>
+          <key>TSKDisableDefaultReportUri</key>
+          <true/>
+          <key>TSKEnforcePinning</key>
+          <true/>
+          <key>TSKIncludeSubdomains</key>
+          <false/>
+          <key>TSKPublicKeyHashes</key>
+          <array>
+            <string>NjTFN+cuVQdG4sSgGP/BynQbh1htjPmmdf5x2X6Boes=</string>
+            <string>OdSlmQD9NWJh4EbcOHBxkhygPwNSwA9Q91eounfbcoE=</string>
+          </array>
+        </dict>
+      </dict>
+      <key>TSKSwizzleNetworkDelegates</key>
+      <true/>
+    </dict>
+    <key>NSBluetoothAlwaysUsageDescription</key>
+    <string>Spectra uses Bluetooth to send and receive encrypted messages when you are offline or near contacts.</string>
+    <key>NSBluetoothPeripheralUsageDescription</key>
+    <string>Spectra uses Bluetooth to allow nearby contacts to discover and message you.</string>
+    <key>NSCameraUsageDescription</key>
+    <string>Allow Spectra to access your camera for scanning QR codes and video calls.</string>
+    <key>NSFaceIDUsageDescription</key>
+    <string>Allow Spectra to use Face ID for secure unlock.</string>
+    <key>NSMicrophoneUsageDescription</key>
+    <string>Allow Spectra to access your microphone for voice and video calls.</string>
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>Spectra uses photos from your library so you can send them in chats, set a profile or group photo, choose a custom chat background, or attach screenshots when reporting an issue. For example, you can pick a photo from your library to send in a conversation.</string>
+    <key>NSPhotoLibraryAddUsageDescription</key>
+    <string>Spectra saves images to your photo library when you download a photo from a chat. For example, you can save a received image to Photos to keep it on this device.</string>
+    <key>NSUserActivityTypes</key>
+    <array>
+      <string>$(PRODUCT_BUNDLE_IDENTIFIER).expo.index_route</string>
+    </array>
+    <key>RCTNewArchEnabled</key>
+    <true/>
+    <key>UIBackgroundModes</key>
+    <array>
+      <string>remote-notification</string>
+      <string>audio</string>
+      <string>fetch</string>
+    </array>
+    <key>UILaunchStoryboardName</key>
+    <string>SplashScreen</string>
+    <key>UIRequiredDeviceCapabilities</key>
+    <array>
+      <string>arm64</string>
+    </array>
+    <key>UIRequiresFullScreen</key>
+    <true/>
+    <key>UIStatusBarStyle</key>
+    <string>UIStatusBarStyleDefault</string>
+    <key>UISupportedInterfaceOrientations</key>
+    <array>
+      <string>UIInterfaceOrientationPortrait</string>
+      <string>UIInterfaceOrientationPortraitUpsideDown</string>
+    </array>
+    <key>UIUserInterfaceStyle</key>
+    <string>Automatic</string>
+    <key>UIViewControllerBasedStatusBarAppearance</key>
+    <false/>
+  </dict>
+</plist>

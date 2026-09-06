@@ -1,0 +1,113 @@
+# @generated expo-cli sync-2b81b286409207a5da26e14c78851eb30d8ccbdb
+# Expo-generated patterns
+
+expo-env.d.ts
+# @end expo-cli
+
+# Environment and runtime secrets
+.env
+.env.*
+!.env.example
+*.env
+*.env.*
+!.env.example
+!ios/.xcode.env
+*.tfvars
+*.tfvars.json
+terraform.tfstate
+terraform.tfstate.*
+crash.log
+crash.*.log
+**/.terraform/
+app.config.local.js
+app.config.local.ts
+eas.submit.local.json
+
+# Supabase local state
+/supabase/.branches/
+/supabase/.temp/
+
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Expo
+.expo/
+.eas/
+/dist/
+dist/
+web-build/
+
+# Native build artifacts
+build/
+builds/
+.gradle/
+android/.gradle/
+android/build/
+android/local.properties
+ios/Pods/
+ios/build/
+ios/.xcode.env.local
+.cxx/
+DerivedData/
+xcuserdata/
+*.xcworkspace/xcuserdata/
+project.xcworkspace/
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+*.xccheckout
+*.xcuserstate
+*.ipa
+*.hprof
+*.iml
+local.properties
+.xcode.env.local
+
+# Native
+*.orig.*
+*.keystore
+*.keystore.properties
+*.jks
+*.p8
+*.p12
+*.key
+*.pem
+*.cer
+*.cert
+*.mobileprovision
+*.provisionprofile
+AuthKey_*.p8
+credentials.json
+eas-credentials.json
+app-store-connect*.json
+google-services.json
+GoogleService-Info.plist
+
+# Metro
+.metro-health-check*
+
+# macOS
+.DS_Store
+
+# Debug
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+
+# TypeScript
+*.tsbuildinfo
+
+# Local-only repository material
+/docs/
+.debug-logs/
+/tmp/
+/play-store-screenshots/
+
+# Python bytecode caches
+**/__pycache__/
+*.pyc
+
+# Native CMake test trees
+native/**/build-test/

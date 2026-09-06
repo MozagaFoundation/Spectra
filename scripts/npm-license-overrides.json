@@ -1,0 +1,70 @@
+{
+  "npm:@expo/ngrok-bin-darwin-arm64@2.3.41": {
+    "license": "MIT",
+    "evidence": "Expo ngrok upstream repository and npm registry metadata identify the platform binary package as MIT."
+  },
+  "npm:@expo/ngrok-bin-darwin-x64@2.3.41": {
+    "license": "MIT",
+    "evidence": "Expo ngrok upstream repository and npm registry metadata identify the platform binary package as MIT."
+  },
+  "npm:@expo/ngrok-bin-freebsd-ia32@2.3.41": {
+    "license": "MIT",
+    "evidence": "Expo ngrok upstream repository and npm registry metadata identify the platform binary package as MIT."
+  },
+  "npm:@expo/ngrok-bin-freebsd-x64@2.3.41": {
+    "license": "MIT",
+    "evidence": "Expo ngrok upstream repository and npm registry metadata identify the platform binary package as MIT."
+  },
+  "npm:@expo/ngrok-bin-linux-arm@2.3.41": {
+    "license": "MIT",
+    "evidence": "Expo ngrok upstream repository and npm registry metadata identify the platform binary package as MIT."
+  },
+  "npm:@expo/ngrok-bin-linux-arm64@2.3.41": {
+    "license": "MIT",
+    "evidence": "Expo ngrok upstream repository and npm registry metadata identify the platform binary package as MIT."
+  },
+  "npm:@expo/ngrok-bin-linux-ia32@2.3.41": {
+    "license": "MIT",
+    "evidence": "Expo ngrok upstream repository and npm registry metadata identify the platform binary package as MIT."
+  },
+  "npm:@expo/ngrok-bin-linux-x64@2.3.41": {
+    "license": "MIT",
+    "evidence": "Expo ngrok upstream repository and npm registry metadata identify the platform binary package as MIT."
+  },
+  "npm:@expo/ngrok-bin-sunos-x64@2.3.41": {
+    "license": "MIT",
+    "evidence": "Expo ngrok upstream repository and npm registry metadata identify the platform binary package as MIT."
+  },
+  "npm:@expo/ngrok-bin-win32-ia32@2.3.41": {
+    "license": "MIT",
+    "evidence": "Expo ngrok upstream repository and npm registry metadata identify the platform binary package as MIT."
+  },
+  "npm:@expo/ngrok-bin-win32-x64@2.3.41": {
+    "license": "MIT",
+    "evidence": "Expo ngrok upstream repository and npm registry metadata identify the platform binary package as MIT."
+  },
+  "npm:@expo/ngrok-bin@2.3.42": {
+    "license": "MIT",
+    "evidence": "Expo ngrok upstream repository and npm registry metadata identify the wrapper package as MIT."
+  },
+  "npm:base-64@0.1.0": {
+    "license": "MIT",
+    "evidence": "Installed package LICENSE-MIT.txt and legacy package licenses field both identify MIT."
+  },
+  "npm:jsonify@0.0.1": {
+    "license": "LicenseRef-Public-Domain",
+    "evidence": "The installed package metadata explicitly dedicates this release to the public domain."
+  },
+  "npm:qrcode-terminal@0.11.0": {
+    "license": "Apache-2.0",
+    "evidence": "Installed package LICENSE contains Apache-2.0 and its legacy licenses field names Apache 2.0."
+  },
+  "npm:react-native-fit-image@1.5.5": {
+    "license": "LicenseRef-Beerware",
+    "evidence": "Installed LICENSE grants unrestricted use when its short Beerware notice is retained."
+  },
+  "npm:requireg@0.2.2": {
+    "license": "MIT",
+    "evidence": "Installed LICENSE contains the MIT grant and the legacy package licenses field names MIT."
+  }
+}

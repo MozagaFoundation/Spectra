@@ -1,0 +1,13 @@
+/*
+ * Copyright (c) 2026 MOZAGA FOUNDATION.
+ * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Spectra-Commercial
+ * See LICENSE.md, LICENSE-AGPL-3.0.txt, and LICENSE-COMMERCIAL.md for details.
+ */
+
+"NSBluetoothAlwaysUsageDescription" = "Spectra آف لائن ہونے یا رابطوں کے قریب ہونے پر خفیہ شدہ پیغامات بھیجنے اور وصول کرنے کے لیے بلوٹوتھ استعمال کرتا ہے۔";
+"NSBluetoothPeripheralUsageDescription" = "Spectra بلوٹوتھ استعمال کرتا ہے تاکہ قریبی رابطے آپ کو دریافت کر سکیں اور آپ کو پیغامات بھیج سکیں۔";
+"NSCameraUsageDescription" = "QR کوڈ اسکین کرنے اور ویڈیو کالز کے لیے Spectra کو آپ کے کیمرے تک رسائی کی اجازت دیں۔";
+"NSFaceIDUsageDescription" = "محفوظ ان لاک کے لیے Spectra کو Face ID استعمال کرنے کی اجازت دیں۔";
+"NSMicrophoneUsageDescription" = "وائس اور ویڈیو کالز کے لیے Spectra کو آپ کے مائیکروفون تک رسائی کی اجازت دیں۔";
+"NSPhotoLibraryUsageDescription" = "Spectra آپ کی لائبریری کی تصاویر استعمال کرتا ہے تاکہ آپ انہیں چیٹس میں بھیج سکیں، پروفائل یا گروپ فوٹو سیٹ کر سکیں، حسب ضرورت چیٹ پس منظر منتخب کر سکیں، یا مسئلہ رپورٹ کرتے وقت اسکرین شاٹس منسلک کر سکیں۔ مثال کے طور پر، آپ گفتگو میں بھیجنے کے لیے اپنی لائبریری سے ایک تصویر منتخب کر سکتے ہیں۔";
+"NSPhotoLibraryAddUsageDescription" = "جب آپ چیٹ سے تصویر ڈاؤن لوڈ کرتے ہیں تو Spectra اسے آپ کی تصویری لائبریری میں محفوظ کرتا ہے۔ مثال کے طور پر، آپ اس ڈیوائس پر رکھنے کے لیے موصول شدہ تصویر Photos میں محفوظ کر سکتے ہیں۔";

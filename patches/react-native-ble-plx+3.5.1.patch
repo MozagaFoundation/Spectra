@@ -1,0 +1,52 @@
+diff --git a/node_modules/react-native-ble-plx/android/src/main/AndroidManifest.xml b/node_modules/react-native-ble-plx/android/src/main/AndroidManifest.xml
+index e418b91..54e8d5c 100644
+--- a/node_modules/react-native-ble-plx/android/src/main/AndroidManifest.xml
++++ b/node_modules/react-native-ble-plx/android/src/main/AndroidManifest.xml
+@@ -2,8 +2,8 @@
+   package="com.bleplx"
+   xmlns:tools="http://schemas.android.com/tools">
+ 
+-  <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+-  <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
++  <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" android:maxSdkVersion="30" />
++  <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" android:maxSdkVersion="30" />
+   <uses-permission
+     android:name="android.permission.BLUETOOTH"
+     android:maxSdkVersion="30" />
+diff --git a/node_modules/react-native-ble-plx/plugin/build/withBLEAndroidManifest.js b/node_modules/react-native-ble-plx/plugin/build/withBLEAndroidManifest.js
+index 94b349f..bbd8ae5 100644
+--- a/node_modules/react-native-ble-plx/plugin/build/withBLEAndroidManifest.js
++++ b/node_modules/react-native-ble-plx/plugin/build/withBLEAndroidManifest.js
+@@ -21,24 +21,25 @@ exports.withBLEAndroidManifest = withBLEAndroidManifest;
+  *    From Android SDK 31 (Android 12) it might not be required if BLE is not used for location.
+  */
+ function addLocationPermissionToManifest(androidManifest, neverForLocationSinceSdk31) {
+-    if (!Array.isArray(androidManifest.manifest['uses-permission-sdk-23'])) {
+-        androidManifest.manifest['uses-permission-sdk-23'] = [];
++    if (!Array.isArray(androidManifest.manifest['uses-permission'])) {
++        androidManifest.manifest['uses-permission'] = [];
+     }
+     const optMaxSdkVersion = neverForLocationSinceSdk31
+         ? {
+-            'android:maxSdkVersion': '30'
++            'android:maxSdkVersion': '30',
++            'tools:node': 'replace',
+         }
+         : {};
+-    if (!androidManifest.manifest['uses-permission-sdk-23'].find(item => item.$['android:name'] === 'android.permission.ACCESS_COARSE_LOCATION')) {
+-        androidManifest.manifest['uses-permission-sdk-23'].push({
++    if (!androidManifest.manifest['uses-permission'].find(item => item.$['android:name'] === 'android.permission.ACCESS_COARSE_LOCATION')) {
++        androidManifest.manifest['uses-permission'].push({
+             $: {
+                 'android:name': 'android.permission.ACCESS_COARSE_LOCATION',
+                 ...optMaxSdkVersion
+             }
+         });
+     }
+-    if (!androidManifest.manifest['uses-permission-sdk-23'].find(item => item.$['android:name'] === 'android.permission.ACCESS_FINE_LOCATION')) {
+-        androidManifest.manifest['uses-permission-sdk-23'].push({
++    if (!androidManifest.manifest['uses-permission'].find(item => item.$['android:name'] === 'android.permission.ACCESS_FINE_LOCATION')) {
++        androidManifest.manifest['uses-permission'].push({
+             $: {
+                 'android:name': 'android.permission.ACCESS_FINE_LOCATION',
+                 ...optMaxSdkVersion

@@ -1,0 +1,14 @@
+{
+  "extends": "./tsconfig.json",
+  "include": [
+    "assets.d.ts",
+    "expo-env.d.ts",
+    "nativewind-env.d.ts",
+    "**/*.test.ts",
+    "**/*.test.tsx"
+  ],
+  "exclude": [
+    "node_modules",
+    "supabase"
+  ]
+}

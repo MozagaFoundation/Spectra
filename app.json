@@ -1,0 +1,175 @@
+{
+  "expo": {
+    "name": "Spectra",
+    "slug": "spectra",
+    "version": "1.2.5",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "spectra",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "splash": {
+      "backgroundColor": "#0c0c0c"
+    },
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "org.spectramozaga.exo",
+      "backgroundColor": "#0c0c0c",
+      "icon": "./assets/images/icon.png",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false,
+        "NSAppTransportSecurity": {
+          "NSAllowsArbitraryLoads": false,
+          "NSAllowsLocalNetworking": true
+        },
+        "UIBackgroundModes": [
+          "remote-notification",
+          "audio",
+          "fetch"
+        ],
+        "NSBluetoothAlwaysUsageDescription": "Spectra uses Bluetooth to send and receive encrypted messages when you are offline or near contacts.",
+        "NSBluetoothPeripheralUsageDescription": "Spectra uses Bluetooth to allow nearby contacts to discover and message you.",
+        "NSFaceIDUsageDescription": "Allow Spectra to use Face ID for secure unlock."
+      },
+      "associatedDomains": [
+        "applinks:spectraprotocol.org",
+        "applinks:www.spectraprotocol.org"
+      ],
+      "entitlements": {
+        "aps-environment": "production",
+        "com.apple.security.application-groups": [
+          "group.org.spectramozaga.exo"
+        ]
+      },
+      "bitcode": false
+    },
+    "android": {
+      "backgroundColor": "#0c0c0c",
+      "package": "com.mozaga.exo",
+      "googleServicesFile": "./android/app/google-services.json",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "backgroundColor": "#0c0c0c"
+      },
+      "intentFilters": [
+        {
+          "action": "VIEW",
+          "autoVerify": true,
+          "data": [
+            {
+              "scheme": "https",
+              "host": "spectraprotocol.org",
+              "pathPrefix": "/u/"
+            },
+            {
+              "scheme": "https",
+              "host": "www.spectraprotocol.org",
+              "pathPrefix": "/u/"
+            }
+          ],
+          "category": ["BROWSABLE", "DEFAULT"]
+        }
+      ],
+      "permissions": [
+        "android.permission.USE_BIOMETRIC",
+        "android.permission.USE_FINGERPRINT",
+        "android.permission.RECORD_AUDIO",
+        "android.permission.CAMERA",
+        "android.permission.MODIFY_AUDIO_SETTINGS",
+        "android.permission.BLUETOOTH",
+        "android.permission.BLUETOOTH_CONNECT",
+        "android.permission.BLUETOOTH_SCAN",
+        "android.permission.BLUETOOTH_ADVERTISE",
+        "android.permission.POST_NOTIFICATIONS",
+        "android.permission.READ_MEDIA_IMAGES",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.READ_MEDIA_VISUAL_USER_SELECTED",
+        "android.permission.READ_MEDIA_VIDEO",
+        "android.permission.READ_MEDIA_AUDIO",
+        "android.permission.ACCESS_NETWORK_STATE",
+        "android.permission.INTERNET",
+        "android.permission.SYSTEM_ALERT_WINDOW",
+        "android.permission.WAKE_LOCK",
+        "android.permission.FOREGROUND_SERVICE",
+        "android.permission.BLUETOOTH_ADMIN"
+      ]
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./assets/images/icon.png"
+    },
+    "locales": {
+      "ar": "./locales/ar.json",
+      "bn": "./locales/bn.json",
+      "de": "./locales/de.json",
+      "en": "./locales/en.json",
+      "es": "./locales/es.json",
+      "fr": "./locales/fr.json",
+      "hi": "./locales/hi.json",
+      "id": "./locales/id.json",
+      "it": "./locales/it.json",
+      "pt": "./locales/pt.json",
+      "ru": "./locales/ru.json",
+      "ur": "./locales/ur.json",
+      "zh-Hans": "./locales/zh-Hans.json"
+    },
+    "plugins": [
+      "./plugins/withBleHardwareFeature",
+      "./plugins/withNotificationServiceExtension",
+      "expo-router",
+      "./plugins/withCertificatePinning",
+      "expo-secure-store",
+      [
+        "expo-local-authentication",
+        {
+          "faceIDPermission": "Allow Spectra to use Face ID for secure unlock."
+        }
+      ],
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow Spectra to access your camera for scanning QR codes and video calls."
+        }
+      ],
+      [
+        "expo-av",
+        {
+          "microphonePermission": "Allow Spectra to access your microphone for voice and video calls."
+        }
+      ],
+      [
+        "expo-notifications",
+        {
+          "color": "#a7da57",
+          "defaultChannel": "default",
+          "sounds": [],
+          "enableBackgroundRemoteNotifications": true
+        }
+      ],
+      [
+        "expo-media-library",
+        {
+          "photosPermission": "Spectra uses photos from your library so you can send them in chats, set a profile or group photo, choose a custom chat background, or attach screenshots when reporting an issue. For example, you can pick a photo from your library to send in a conversation.",
+          "savePhotosPermission": "Spectra saves images to your photo library when you download a photo from a chat. For example, you can save a received image to Photos to keep it on this device."
+        }
+      ],
+      "@config-plugins/react-native-webrtc",
+      "expo-config-plugin-incall-manager",
+      [
+        "react-native-ble-plx",
+        {
+          "neverForLocation": true
+        }
+      ],
+      "expo-localization"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "extra": {
+      "router": {}
+    }
+  }
+}

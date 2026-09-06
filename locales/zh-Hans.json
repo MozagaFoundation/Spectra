@@ -1,0 +1,9 @@
+{
+  "NSBluetoothAlwaysUsageDescription": "Spectra 使用蓝牙在您离线或靠近联系人时发送和接收加密消息。",
+  "NSBluetoothPeripheralUsageDescription": "Spectra 使用蓝牙让附近的联系人发现您并向您发送消息。",
+  "NSCameraUsageDescription": "允许 Spectra 访问您的相机以扫描二维码和进行视频通话。",
+  "NSFaceIDUsageDescription": "允许 Spectra 使用 Face ID 进行安全解锁。",
+  "NSMicrophoneUsageDescription": "允许 Spectra 访问您的麦克风以进行语音和视频通话。",
+  "NSPhotoLibraryUsageDescription": "Spectra 使用您资料库中的照片，以便您可以在聊天中发送照片、设置个人或群组照片、选择自定义聊天背景，或在反馈问题时附上截图。例如，您可以从资料库中选择一张照片发送到对话中。",
+  "NSPhotoLibraryAddUsageDescription": "当您从聊天中下载照片时，Spectra 会将其保存到您的照片图库。例如，您可以将收到的图片保存到「照片」中，以便保留在此设备上。"
+}

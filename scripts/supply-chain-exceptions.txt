@@ -1,0 +1,13 @@
+# Supply-chain exception registry
+#
+# Default: no vulnerability or license exceptions. CI fails closed.
+# Format:
+# kind|component|finding|expires_yyyy-mm-dd|owner|risk_ticket|rationale
+#
+# kind is "license" or "vulnerability". component and finding must exactly match
+# scanner output. Exceptions expire within 90 days and require an accountable
+# owner, an approved SEC-/RISK- ticket, and a specific risk rationale.
+#
+# Vulnerability exceptions must also be configured in the scanner's native
+# ignore file. License exceptions are consumed directly by
+# verify-dependency-licenses.py. This file alone never suppresses a scanner.

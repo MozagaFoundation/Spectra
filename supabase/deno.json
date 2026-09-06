@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "lib": ["deno.ns", "dom", "es2023"],
+    "strict": true,
+    "noImplicitOverride": true,
+    "noUncheckedIndexedAccess": true
+  },
+  "imports": {
+    "@noble/curves/ed25519": "npm:@noble/curves@1.4.0/ed25519",
+    "@noble/curves/secp256k1": "npm:@noble/curves@1.4.0/secp256k1",
+    "@noble/hashes/ripemd160": "npm:@noble/hashes@1.5.0/ripemd160",
+    "@noble/hashes/sha256": "npm:@noble/hashes@1.5.0/sha256",
+    "@noble/hashes/sha3": "npm:@noble/hashes@1.5.0/sha3",
+    "@noble/post-quantum/ml-dsa.js": "npm:@noble/post-quantum@0.5.4/ml-dsa.js"
+  },
+  "lock": false,
+  "nodeModulesDir": "none",
+  "tasks": {
+    "check": "deno check tests/**/*_test.ts",
+    "test": "deno test --allow-env --allow-read=.. tests/protocol_contract_test.ts tests/state_contract_test.ts tests/static_guards_test.ts tests/call_delivery_contract_test.ts tests/wallet_index_activation_test.ts",
+    "test:integration": "deno test --allow-env --allow-net tests/integration_contract_test.ts",
+    "test:all": "deno test --allow-env --allow-read=.. --allow-net tests"
+  }
+}

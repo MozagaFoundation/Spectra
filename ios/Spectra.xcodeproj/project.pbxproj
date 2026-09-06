@@ -1,0 +1,1020 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 54;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
+		19CEBBE1F4F87BB6E7F59E60 /* ExpoModulesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED49895851171AFB6C27AF9 /* ExpoModulesProvider.swift */; };
+		2133A370D42DF7926BD6FE72 /* IPtProxyModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939176D7877B941C71346D90 /* IPtProxyModule.swift */; };
+		2A4E8D5F1B2C3D4E5F607182 /* PBKDF2Module.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C91D5A43E2B1F60718293A4 /* PBKDF2Module.swift */; };
+		2B5F9E601C3D4A5B6C708193 /* AttachmentFileProtection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D02E6B54F3C2A718293A4B5 /* AttachmentFileProtection.swift */; };
+		3E461D99554A48A4959DE609 /* SplashScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */; };
+		3EC5E16712418B6499CA1105 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = B44060372A0748E8093609F3 /* PrivacyInfo.xcprivacy */; };
+		4A8B8C9D10E11F1203040506 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8B8C9D10E11F1203040505 /* ShareViewController.swift */; };
+		4A8B8C9D10E11F120304050A /* SpectraShareExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 4A8B8C9D10E11F1203040509 /* SpectraShareExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		4A8B8C9D10E11F1203040520 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4A8B8C9D10E11F120304052F /* Localizable.strings */; };
+		4A8B8C9D10E11F1203040521 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4A8B8C9D10E11F120304053D /* InfoPlist.strings */; };
+		8A1B2C3D4E5F60718293A401 /* AppKeyValueModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1B2C3D4E5F60718293A411 /* AppKeyValueModule.swift */; };
+		8A1B2C3D4E5F60718293A402 /* AppKeyValueModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A1B2C3D4E5F60718293A412 /* AppKeyValueModule.m */; };
+		8A1B2C3D4E5F60718293A403 /* MediaCryptoModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1B2C3D4E5F60718293A413 /* MediaCryptoModule.swift */; };
+		8A1B2C3D4E5F60718293A404 /* MediaCryptoModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A1B2C3D4E5F60718293A414 /* MediaCryptoModule.m */; };
+		C9D0E1F2011F1203040506 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D0E1F2011F1203040501 /* NotificationService.swift */; };
+		C9D0E1F2011F1203040507 /* SealedPrefetchStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D0E1F2011F1203040502 /* SealedPrefetchStore.swift */; };
+		C9D0E1F2011F1203040508 /* SealedPrefetchStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D0E1F2011F1203040502 /* SealedPrefetchStore.swift */; };
+		C9D0E1F2011F120304050B /* SealedPrefetchModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D0E1F2011F1203040509 /* SealedPrefetchModule.swift */; };
+		C9D0E1F2011F120304050C /* SealedPrefetchModule.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D0E1F2011F120304050A /* SealedPrefetchModule.m */; };
+		C9D0E1F2011F120304050D /* SpectraNotificationService.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = C9D0E1F2011F1203040505 /* SpectraNotificationService.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		C9D0E1F2011F1203040519 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9D0E1F2011F1203040518 /* UserNotifications.framework */; };
+		9030B3C4C6A2415C878BEA77 /* CallKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6359E24DBC3A4F6EBCB4E31E /* CallKit.framework */; };
+		94FBACAB23DF202FEB51AE68 /* libPods-Spectra.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CC38935678169517E5E713B /* libPods-Spectra.a */; };
+		A0B1C2D3E4F5061728394A5B /* MlDsaModule.mm in Sources */ = {isa = PBXBuildFile; fileRef = B2C3D4E5F60718293A4B5C6D /* MlDsaModule.mm */; };
+		A1B2C3D4E5F60718293A4B5C /* VdfModule.mm in Sources */ = {isa = PBXBuildFile; fileRef = A2B3C4D5E6F708192A3B4C5D /* VdfModule.mm */; };
+		BB2F792D24A3F905000567C9 /* Expo.plist in Resources */ = {isa = PBXBuildFile; fileRef = BB2F792C24A3F905000567C9 /* Expo.plist */; };
+		C0D1E2F3A4B5061728394A5C /* MlKemModule.mm in Sources */ = {isa = PBXBuildFile; fileRef = D1E2F3A4B5C60718293A4B5D /* MlKemModule.mm */; };
+		C3A24F60660B4952B89C755D /* Intents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC7B53F97318496FBB9DDCBE /* Intents.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		E6F60842116D4345B4A32F1E /* IPtProxyModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D79933F41A6E81E8FA20F76 /* IPtProxyModule.m */; };
+		F0A1B2C3D4E5F60718293A4B /* PBKDF2Module.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B5A4C3D2E1F091827364554 /* PBKDF2Module.m */; };
+		F11748422D0307B40044C1D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11748412D0307B40044C1D9 /* AppDelegate.swift */; };
+		F1B2C3D4E5F60718293A4B5C /* AttachmentFileProtection.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C6B5A4938271605F4E3D2C1 /* AttachmentFileProtection.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4A8B8C9D10E11F120304050C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4A8B8C9D10E11F1203040508;
+			remoteInfo = SpectraShareExtension;
+		};
+		C9D0E1F2011F1203040513 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C9D0E1F2011F120304050E;
+			remoteInfo = SpectraNotificationService;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4A8B8C9D10E11F120304050B /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				4A8B8C9D10E11F120304050A /* SpectraShareExtension.appex in Embed App Extensions */,
+				C9D0E1F2011F120304050D /* SpectraNotificationService.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		13B07F961A680F5B00A75B9A /* Spectra.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spectra.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Spectra/Images.xcassets; sourceTree = "<group>"; };
+		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Spectra/Info.plist; sourceTree = "<group>"; };
+		1D79933F41A6E81E8FA20F76 /* IPtProxyModule.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IPtProxyModule.m; path = Spectra/IPtProxyModule.m; sourceTree = "<group>"; };
+		4A8B8C9D10E11F1203040502 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Info.plist; sourceTree = "<group>"; };
+		4A8B8C9D10E11F1203040503 /* SpectraShareExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = SpectraShareExtension.entitlements; path = SpectraShareExtension.entitlements; sourceTree = "<group>"; };
+		4A8B8C9D10E11F1203040505 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ShareViewController.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
+		4A8B8C9D10E11F1203040509 /* SpectraShareExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SpectraShareExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A8B8C9D10E11F1203040522 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4A8B8C9D10E11F1203040523 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4A8B8C9D10E11F1203040524 /* bn */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = bn; path = bn.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4A8B8C9D10E11F1203040525 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4A8B8C9D10E11F1203040526 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4A8B8C9D10E11F1203040527 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4A8B8C9D10E11F1203040528 /* hi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hi; path = hi.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4A8B8C9D10E11F1203040529 /* id */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = id; path = id.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4A8B8C9D10E11F120304052A /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4A8B8C9D10E11F120304052B /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = pt.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4A8B8C9D10E11F120304052C /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4A8B8C9D10E11F120304052D /* ur */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ur; path = ur.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4A8B8C9D10E11F120304052E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		4A8B8C9D10E11F1203040530 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Spectra/en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4A8B8C9D10E11F1203040531 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = Spectra/ar.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4A8B8C9D10E11F1203040532 /* bn */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = bn; path = Spectra/bn.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4A8B8C9D10E11F1203040533 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = Spectra/de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4A8B8C9D10E11F1203040534 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = Spectra/es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4A8B8C9D10E11F1203040535 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = Spectra/fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4A8B8C9D10E11F1203040536 /* hi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hi; path = Spectra/hi.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4A8B8C9D10E11F1203040537 /* id */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = id; path = Spectra/id.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4A8B8C9D10E11F1203040538 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = Spectra/it.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4A8B8C9D10E11F1203040539 /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = Spectra/pt.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4A8B8C9D10E11F120304053A /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = Spectra/ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4A8B8C9D10E11F120304053B /* ur */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ur; path = Spectra/ur.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4A8B8C9D10E11F120304053C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "Spectra/zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		6359E24DBC3A4F6EBCB4E31E /* CallKit.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = CallKit.framework; path = System/Library/Frameworks/CallKit.framework; sourceTree = SDKROOT; };
+		6B5A4C3D2E1F091827364554 /* PBKDF2Module.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PBKDF2Module.m; path = Spectra/PBKDF2Module.m; sourceTree = "<group>"; };
+		7C6B5A4938271605F4E3D2C1 /* AttachmentFileProtection.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AttachmentFileProtection.m; path = Spectra/AttachmentFileProtection.m; sourceTree = "<group>"; };
+		7C91D5A43E2B1F60718293A4 /* PBKDF2Module.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PBKDF2Module.swift; path = Spectra/PBKDF2Module.swift; sourceTree = "<group>"; };
+		8A1B2C3D4E5F60718293A411 /* AppKeyValueModule.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AppKeyValueModule.swift; path = Spectra/AppKeyValueModule.swift; sourceTree = "<group>"; };
+		8A1B2C3D4E5F60718293A412 /* AppKeyValueModule.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AppKeyValueModule.m; path = Spectra/AppKeyValueModule.m; sourceTree = "<group>"; };
+		8A1B2C3D4E5F60718293A413 /* MediaCryptoModule.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MediaCryptoModule.swift; path = Spectra/MediaCryptoModule.swift; sourceTree = "<group>"; };
+		8A1B2C3D4E5F60718293A414 /* MediaCryptoModule.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MediaCryptoModule.m; path = Spectra/MediaCryptoModule.m; sourceTree = "<group>"; };
+		C9D0E1F2011F1203040501 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NotificationService.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		C9D0E1F2011F1203040502 /* SealedPrefetchStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SealedPrefetchStore.swift; path = SealedPrefetchStore.swift; sourceTree = "<group>"; };
+		C9D0E1F2011F1203040503 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Info.plist; sourceTree = "<group>"; };
+		C9D0E1F2011F1203040504 /* SpectraNotificationService.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = SpectraNotificationService.entitlements; path = SpectraNotificationService.entitlements; sourceTree = "<group>"; };
+		C9D0E1F2011F1203040505 /* SpectraNotificationService.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SpectraNotificationService.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9D0E1F2011F1203040509 /* SealedPrefetchModule.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SealedPrefetchModule.swift; path = Spectra/SealedPrefetchModule.swift; sourceTree = "<group>"; };
+		C9D0E1F2011F120304050A /* SealedPrefetchModule.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SealedPrefetchModule.m; path = Spectra/SealedPrefetchModule.m; sourceTree = "<group>"; };
+		C9D0E1F2011F1203040518 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		8D02E6B54F3C2A718293A4B5 /* AttachmentFileProtection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AttachmentFileProtection.swift; path = Spectra/AttachmentFileProtection.swift; sourceTree = "<group>"; };
+		939176D7877B941C71346D90 /* IPtProxyModule.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IPtProxyModule.swift; path = Spectra/IPtProxyModule.swift; sourceTree = "<group>"; };
+		9CC38935678169517E5E713B /* libPods-Spectra.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Spectra.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9ED49895851171AFB6C27AF9 /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-Spectra/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
+		A2B3C4D5E6F708192A3B4C5D /* VdfModule.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = VdfModule.mm; path = Spectra/VdfModule.mm; sourceTree = "<group>"; };
+		AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = SplashScreen.storyboard; path = Spectra/SplashScreen.storyboard; sourceTree = "<group>"; };
+		B2C3D4E5F60718293A4B5C6D /* MlDsaModule.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = MlDsaModule.mm; path = Spectra/MlDsaModule.mm; sourceTree = "<group>"; };
+		B44060372A0748E8093609F3 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; name = PrivacyInfo.xcprivacy; path = Spectra/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		BB2F792C24A3F905000567C9 /* Expo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Expo.plist; sourceTree = "<group>"; };
+		D09BC8497B77C67C879EA0EB /* Pods-Spectra.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spectra.release.xcconfig"; path = "Target Support Files/Pods-Spectra/Pods-Spectra.release.xcconfig"; sourceTree = "<group>"; };
+		D1E2F3A4B5C60718293A4B5D /* MlKemModule.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = MlKemModule.mm; path = Spectra/MlKemModule.mm; sourceTree = "<group>"; };
+		DC7B53F97318496FBB9DDCBE /* Intents.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = Intents.framework; path = System/Library/Frameworks/Intents.framework; sourceTree = SDKROOT; };
+		EEF12D3B920200DC8FA3C078 /* Pods-Spectra.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spectra.debug.xcconfig"; path = "Target Support Files/Pods-Spectra/Pods-Spectra.debug.xcconfig"; sourceTree = "<group>"; };
+		F11748412D0307B40044C1D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Spectra/AppDelegate.swift; sourceTree = "<group>"; };
+		F11748442D0722820044C1D9 /* Spectra-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Spectra-Bridging-Header.h"; path = "Spectra/Spectra-Bridging-Header.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		13B07F8C1A680F5B00A75B9A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94FBACAB23DF202FEB51AE68 /* libPods-Spectra.a in Frameworks */,
+				9030B3C4C6A2415C878BEA77 /* CallKit.framework in Frameworks */,
+				C3A24F60660B4952B89C755D /* Intents.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4A8B8C9D10E11F1203040507 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9D0E1F2011F1203040510 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9D0E1F2011F1203040519 /* UserNotifications.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		13B07FAE1A68108700A75B9A /* Spectra */ = {
+			isa = PBXGroup;
+			children = (
+				F11748412D0307B40044C1D9 /* AppDelegate.swift */,
+				F11748442D0722820044C1D9 /* Spectra-Bridging-Header.h */,
+				BB2F792B24A3F905000567C9 /* Supporting */,
+				13B07FB51A68108700A75B9A /* Images.xcassets */,
+				13B07FB61A68108700A75B9A /* Info.plist */,
+				4A8B8C9D10E11F120304053D /* InfoPlist.strings */,
+				AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */,
+				B44060372A0748E8093609F3 /* PrivacyInfo.xcprivacy */,
+				939176D7877B941C71346D90 /* IPtProxyModule.swift */,
+				1D79933F41A6E81E8FA20F76 /* IPtProxyModule.m */,
+				7C91D5A43E2B1F60718293A4 /* PBKDF2Module.swift */,
+				6B5A4C3D2E1F091827364554 /* PBKDF2Module.m */,
+				A2B3C4D5E6F708192A3B4C5D /* VdfModule.mm */,
+				B2C3D4E5F60718293A4B5C6D /* MlDsaModule.mm */,
+				D1E2F3A4B5C60718293A4B5D /* MlKemModule.mm */,
+				8D02E6B54F3C2A718293A4B5 /* AttachmentFileProtection.swift */,
+				7C6B5A4938271605F4E3D2C1 /* AttachmentFileProtection.m */,
+				8A1B2C3D4E5F60718293A411 /* AppKeyValueModule.swift */,
+				8A1B2C3D4E5F60718293A412 /* AppKeyValueModule.m */,
+				8A1B2C3D4E5F60718293A413 /* MediaCryptoModule.swift */,
+				8A1B2C3D4E5F60718293A414 /* MediaCryptoModule.m */,
+				C9D0E1F2011F1203040509 /* SealedPrefetchModule.swift */,
+				C9D0E1F2011F120304050A /* SealedPrefetchModule.m */,
+			);
+			name = Spectra;
+			sourceTree = "<group>";
+		};
+		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9CC38935678169517E5E713B /* libPods-Spectra.a */,
+				6359E24DBC3A4F6EBCB4E31E /* CallKit.framework */,
+				DC7B53F97318496FBB9DDCBE /* Intents.framework */,
+				C9D0E1F2011F1203040518 /* UserNotifications.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		39674C083AD0EB02C43BF59A /* ExpoModulesProviders */ = {
+			isa = PBXGroup;
+			children = (
+				92EC52A32CF78FEAF42EE681 /* Spectra */,
+			);
+			name = ExpoModulesProviders;
+			sourceTree = "<group>";
+		};
+		4A8B8C9D10E11F1203040504 /* SpectraShareExtension */ = {
+			isa = PBXGroup;
+			children = (
+				4A8B8C9D10E11F1203040505 /* ShareViewController.swift */,
+				4A8B8C9D10E11F120304052F /* Localizable.strings */,
+				4A8B8C9D10E11F1203040502 /* Info.plist */,
+				4A8B8C9D10E11F1203040503 /* SpectraShareExtension.entitlements */,
+			);
+			name = SpectraShareExtension;
+			path = SpectraShareExtension;
+			sourceTree = "<group>";
+		};
+		C9D0E1F2011F1203040512 /* SpectraNotificationService */ = {
+			isa = PBXGroup;
+			children = (
+				C9D0E1F2011F1203040501 /* NotificationService.swift */,
+				C9D0E1F2011F1203040502 /* SealedPrefetchStore.swift */,
+				C9D0E1F2011F1203040503 /* Info.plist */,
+				C9D0E1F2011F1203040504 /* SpectraNotificationService.entitlements */,
+			);
+			name = SpectraNotificationService;
+			path = SpectraNotificationService;
+			sourceTree = "<group>";
+		};
+		5DD102C53C900C871CBA2135 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EEF12D3B920200DC8FA3C078 /* Pods-Spectra.debug.xcconfig */,
+				D09BC8497B77C67C879EA0EB /* Pods-Spectra.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		83CBB9F61A601CBA00E9B192 = {
+			isa = PBXGroup;
+			children = (
+				13B07FAE1A68108700A75B9A /* Spectra */,
+				4A8B8C9D10E11F1203040504 /* SpectraShareExtension */,
+				C9D0E1F2011F1203040512 /* SpectraNotificationService */,
+				83CBBA001A601CBA00E9B192 /* Products */,
+				2D16E6871FA4F8E400B85C8A /* Frameworks */,
+				5DD102C53C900C871CBA2135 /* Pods */,
+				39674C083AD0EB02C43BF59A /* ExpoModulesProviders */,
+			);
+			indentWidth = 2;
+			sourceTree = "<group>";
+			tabWidth = 2;
+			usesTabs = 0;
+		};
+		83CBBA001A601CBA00E9B192 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				13B07F961A680F5B00A75B9A /* Spectra.app */,
+				4A8B8C9D10E11F1203040509 /* SpectraShareExtension.appex */,
+				C9D0E1F2011F1203040505 /* SpectraNotificationService.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		92EC52A32CF78FEAF42EE681 /* Spectra */ = {
+			isa = PBXGroup;
+			children = (
+				9ED49895851171AFB6C27AF9 /* ExpoModulesProvider.swift */,
+			);
+			name = Spectra;
+			sourceTree = "<group>";
+		};
+		BB2F792B24A3F905000567C9 /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				BB2F792C24A3F905000567C9 /* Expo.plist */,
+			);
+			name = Supporting;
+			path = Spectra/Supporting;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		13B07F861A680F5B00A75B9A /* Spectra */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "Spectra" */;
+			buildPhases = (
+				08A4A3CD28434E44B6B9DE2E /* [CP] Check Pods Manifest.lock */,
+				61DAEF088482688B3D388E10 /* [Expo] Configure project */,
+				13B07F871A680F5B00A75B9A /* Sources */,
+				13B07F8C1A680F5B00A75B9A /* Frameworks */,
+				13B07F8E1A680F5B00A75B9A /* Resources */,
+				4A8B8C9D10E11F120304050B /* Embed App Extensions */,
+				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
+				800E24972A6A228C8D4807E9 /* [CP] Copy Pods Resources */,
+				30EBFB0CF41B3175378E79FF /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4A8B8C9D10E11F120304050D /* PBXTargetDependency */,
+				C9D0E1F2011F1203040514 /* PBXTargetDependency */,
+			);
+			name = Spectra;
+			productName = Spectra;
+			productReference = 13B07F961A680F5B00A75B9A /* Spectra.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4A8B8C9D10E11F1203040508 /* SpectraShareExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4A8B8C9D10E11F1203040512 /* Build configuration list for PBXNativeTarget "SpectraShareExtension" */;
+			buildPhases = (
+				4A8B8C9D10E11F120304050F /* Sources */,
+				4A8B8C9D10E11F1203040507 /* Frameworks */,
+				4A8B8C9D10E11F1203040510 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SpectraShareExtension;
+			productName = SpectraShareExtension;
+			productReference = 4A8B8C9D10E11F1203040509 /* SpectraShareExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		C9D0E1F2011F120304050E /* SpectraNotificationService */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C9D0E1F2011F1203040517 /* Build configuration list for PBXNativeTarget "SpectraNotificationService" */;
+			buildPhases = (
+				C9D0E1F2011F120304050F /* Sources */,
+				C9D0E1F2011F1203040510 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SpectraNotificationService;
+			productName = SpectraNotificationService;
+			productReference = C9D0E1F2011F1203040505 /* SpectraNotificationService.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		83CBB9F71A601CBA00E9B192 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1130;
+				TargetAttributes = {
+					13B07F861A680F5B00A75B9A = {
+						LastSwiftMigration = 1250;
+					};
+					4A8B8C9D10E11F1203040508 = {
+						CreatedOnToolsVersion = 15.0;
+						LastSwiftMigration = 1500;
+					};
+					C9D0E1F2011F120304050E = {
+						CreatedOnToolsVersion = 15.0;
+						LastSwiftMigration = 1500;
+					};
+				};
+			};
+			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "Spectra" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				ar,
+				bn,
+				de,
+				es,
+				fr,
+				hi,
+				id,
+				it,
+				pt,
+				ru,
+				ur,
+				"zh-Hans",
+			);
+			mainGroup = 83CBB9F61A601CBA00E9B192;
+			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				13B07F861A680F5B00A75B9A /* Spectra */,
+				4A8B8C9D10E11F1203040508 /* SpectraShareExtension */,
+				C9D0E1F2011F120304050E /* SpectraNotificationService */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		13B07F8E1A680F5B00A75B9A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB2F792D24A3F905000567C9 /* Expo.plist in Resources */,
+				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				3E461D99554A48A4959DE609 /* SplashScreen.storyboard in Resources */,
+				3EC5E16712418B6499CA1105 /* PrivacyInfo.xcprivacy in Resources */,
+				4A8B8C9D10E11F1203040521 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4A8B8C9D10E11F1203040510 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A8B8C9D10E11F1203040520 /* Localizable.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/.xcode.env",
+				"$(SRCROOT)/.xcode.env.local",
+			);
+			name = "Bundle React Native code and images";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [[ -f \"$PODS_ROOT/../.xcode.env\" ]]; then\n  source \"$PODS_ROOT/../.xcode.env\"\nfi\nif [[ -f \"$PODS_ROOT/../.xcode.env.local\" ]]; then\n  source \"$PODS_ROOT/../.xcode.env.local\"\nfi\n\n# The project root by default is one level up from the ios directory\nexport PROJECT_ROOT=\"$PROJECT_DIR\"/..\n\nif [[ \"$CONFIGURATION\" = *Debug* ]]; then\n  export SKIP_BUNDLING=1\nfi\nif [[ -z \"$ENTRY_FILE\" ]]; then\n  # Set the entry JS file using the bundler's entry resolution.\n  export ENTRY_FILE=\"$(\"$NODE_BINARY\" -e \"require('expo/scripts/resolveAppEntry')\" \"$PROJECT_ROOT\" ios absolute | tail -n 1)\"\nfi\n\nif [[ -z \"$CLI_PATH\" ]]; then\n  # Use Expo CLI\n  export CLI_PATH=\"$(\"$NODE_BINARY\" --print \"require.resolve('@expo/cli', { paths: [require.resolve('expo/package.json')] })\")\"\nfi\nif [[ -z \"$BUNDLE_COMMAND\" ]]; then\n  # Default Expo CLI command for bundling\n  export BUNDLE_COMMAND=\"export:embed\"\nfi\n\n# Source .xcode.env.updates if it exists to allow\n# SKIP_BUNDLING to be unset if needed\nif [[ -f \"$PODS_ROOT/../.xcode.env.updates\" ]]; then\n  source \"$PODS_ROOT/../.xcode.env.updates\"\nfi\n# Source local changes to allow overrides\n# if needed\nif [[ -f \"$PODS_ROOT/../.xcode.env.local\" ]]; then\n  source \"$PODS_ROOT/../.xcode.env.local\"\nfi\n\n`\"$NODE_BINARY\" --print \"require('path').dirname(require.resolve('react-native/package.json')) + '/scripts/react-native-xcode.sh'\"`\n\n";
+		};
+		08A4A3CD28434E44B6B9DE2E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Spectra-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		30EBFB0CF41B3175378E79FF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Spectra/Pods-Spectra-frameworks.sh",
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/JitsiWebRTC/WebRTC.framework/WebRTC",
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/React-Core-prebuilt/React.framework/React",
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/ReactNativeDependencies/ReactNativeDependencies.framework/ReactNativeDependencies",
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/hermes-engine/Pre-built/hermes.framework/hermes",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WebRTC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/React.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactNativeDependencies.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/hermes.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Spectra/Pods-Spectra-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		61DAEF088482688B3D388E10 /* [Expo] Configure project */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/.xcode.env",
+				"$(SRCROOT)/.xcode.env.local",
+				"$(SRCROOT)/Spectra/Spectra.entitlements",
+				"$(SRCROOT)/Pods/Target Support Files/Pods-Spectra/expo-configure-project.sh",
+			);
+			name = "[Expo] Configure project";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(SRCROOT)/Pods/Target Support Files/Pods-Spectra/ExpoModulesProvider.swift",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# This script configures Expo modules and generates the modules provider file.\nbash -l -c \"./Pods/Target\\ Support\\ Files/Pods-Spectra/expo-configure-project.sh\"\n";
+		};
+		800E24972A6A228C8D4807E9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Spectra/Pods-Spectra-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/EXApplication/ExpoApplication_privacy.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/EXConstants/EXConstants.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/EXConstants/ExpoConstants_privacy.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/EXNotifications/ExpoNotifications_privacy.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/EXTaskManager/ExpoTaskManager_privacy.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/ExpoFileSystem/ExpoFileSystem_privacy.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/ExpoLocalization/ExpoLocalization_privacy.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/ExpoMediaLibrary/ExpoMediaLibrary_privacy.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/RNCAsyncStorage/RNCAsyncStorage_resources.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/RNSVG/RNSVGFilters.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/React-Core/React-Core_privacy.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/React-cxxreact/React-cxxreact_privacy.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/SDWebImage/SDWebImage.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/TrustKit/TrustKit.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/react-native-blob-util/ReactNativeBlobUtilPrivacyInfo.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ExpoApplication_privacy.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/EXConstants.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ExpoConstants_privacy.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ExpoNotifications_privacy.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ExpoTaskManager_privacy.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ExpoFileSystem_privacy.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ExpoLocalization_privacy.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ExpoMediaLibrary_privacy.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/RNCAsyncStorage_resources.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/RNSVGFilters.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/React-Core_privacy.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/React-cxxreact_privacy.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SDWebImage.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TrustKit.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ReactNativeBlobUtilPrivacyInfo.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Spectra/Pods-Spectra-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		13B07F871A680F5B00A75B9A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F11748422D0307B40044C1D9 /* AppDelegate.swift in Sources */,
+				19CEBBE1F4F87BB6E7F59E60 /* ExpoModulesProvider.swift in Sources */,
+				2133A370D42DF7926BD6FE72 /* IPtProxyModule.swift in Sources */,
+				E6F60842116D4345B4A32F1E /* IPtProxyModule.m in Sources */,
+				2A4E8D5F1B2C3D4E5F607182 /* PBKDF2Module.swift in Sources */,
+				F0A1B2C3D4E5F60718293A4B /* PBKDF2Module.m in Sources */,
+				A1B2C3D4E5F60718293A4B5C /* VdfModule.mm in Sources */,
+				A0B1C2D3E4F5061728394A5B /* MlDsaModule.mm in Sources */,
+				C0D1E2F3A4B5061728394A5C /* MlKemModule.mm in Sources */,
+				2B5F9E601C3D4A5B6C708193 /* AttachmentFileProtection.swift in Sources */,
+				F1B2C3D4E5F60718293A4B5C /* AttachmentFileProtection.m in Sources */,
+				8A1B2C3D4E5F60718293A401 /* AppKeyValueModule.swift in Sources */,
+				8A1B2C3D4E5F60718293A402 /* AppKeyValueModule.m in Sources */,
+				8A1B2C3D4E5F60718293A403 /* MediaCryptoModule.swift in Sources */,
+				8A1B2C3D4E5F60718293A404 /* MediaCryptoModule.m in Sources */,
+				C9D0E1F2011F1203040508 /* SealedPrefetchStore.swift in Sources */,
+				C9D0E1F2011F120304050B /* SealedPrefetchModule.swift in Sources */,
+				C9D0E1F2011F120304050C /* SealedPrefetchModule.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4A8B8C9D10E11F120304050F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A8B8C9D10E11F1203040506 /* ShareViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9D0E1F2011F120304050F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9D0E1F2011F1203040506 /* NotificationService.swift in Sources */,
+				C9D0E1F2011F1203040507 /* SealedPrefetchStore.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4A8B8C9D10E11F120304050D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4A8B8C9D10E11F1203040508 /* SpectraShareExtension */;
+			targetProxy = 4A8B8C9D10E11F120304050C /* PBXContainerItemProxy */;
+		};
+		C9D0E1F2011F1203040514 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C9D0E1F2011F120304050E /* SpectraNotificationService */;
+			targetProxy = C9D0E1F2011F1203040513 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4A8B8C9D10E11F120304052F /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4A8B8C9D10E11F1203040522 /* en */,
+				4A8B8C9D10E11F1203040523 /* ar */,
+				4A8B8C9D10E11F1203040524 /* bn */,
+				4A8B8C9D10E11F1203040525 /* de */,
+				4A8B8C9D10E11F1203040526 /* es */,
+				4A8B8C9D10E11F1203040527 /* fr */,
+				4A8B8C9D10E11F1203040528 /* hi */,
+				4A8B8C9D10E11F1203040529 /* id */,
+				4A8B8C9D10E11F120304052A /* it */,
+				4A8B8C9D10E11F120304052B /* pt */,
+				4A8B8C9D10E11F120304052C /* ru */,
+				4A8B8C9D10E11F120304052D /* ur */,
+				4A8B8C9D10E11F120304052E /* zh-Hans */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		4A8B8C9D10E11F120304053D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4A8B8C9D10E11F1203040530 /* en */,
+				4A8B8C9D10E11F1203040531 /* ar */,
+				4A8B8C9D10E11F1203040532 /* bn */,
+				4A8B8C9D10E11F1203040533 /* de */,
+				4A8B8C9D10E11F1203040534 /* es */,
+				4A8B8C9D10E11F1203040535 /* fr */,
+				4A8B8C9D10E11F1203040536 /* hi */,
+				4A8B8C9D10E11F1203040537 /* id */,
+				4A8B8C9D10E11F1203040538 /* it */,
+				4A8B8C9D10E11F1203040539 /* pt */,
+				4A8B8C9D10E11F120304053A /* ru */,
+				4A8B8C9D10E11F120304053B /* ur */,
+				4A8B8C9D10E11F120304053C /* zh-Hans */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		13B07F941A680F5B00A75B9A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EEF12D3B920200DC8FA3C078 /* Pods-Spectra.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Spectra/Spectra.entitlements;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2P752VF3U7;
+				ENABLE_BITCODE = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"FB_SONARKIT_ENABLED=1",
+				);
+				INFOPLIST_FILE = Spectra/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.2.5;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-lc++",
+				);
+				OTHER_SWIFT_FLAGS = "$(inherited) -D EXPO_CONFIGURATION_DEBUG";
+				PRODUCT_BUNDLE_IDENTIFIER = org.spectramozaga.exo;
+				PRODUCT_NAME = Spectra;
+				SWIFT_OBJC_BRIDGING_HEADER = "Spectra/Spectra-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug;
+		};
+		13B07F951A680F5B00A75B9A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D09BC8497B77C67C879EA0EB /* Pods-Spectra.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Spectra/Spectra.entitlements;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2P752VF3U7;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = Spectra/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.2.5;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-lc++",
+				);
+				OTHER_SWIFT_FLAGS = "$(inherited) -D EXPO_CONFIGURATION_RELEASE";
+				PRODUCT_BUNDLE_IDENTIFIER = org.spectramozaga.exo;
+				PRODUCT_NAME = Spectra;
+				SWIFT_OBJC_BRIDGING_HEADER = "Spectra/Spectra-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Release;
+		};
+		4A8B8C9D10E11F1203040511 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = SpectraShareExtension/SpectraShareExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2P752VF3U7;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = SpectraShareExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.2.5;
+				OTHER_SWIFT_FLAGS = "$(inherited) -D EXPO_CONFIGURATION_DEBUG";
+				PRODUCT_BUNDLE_IDENTIFIER = org.spectramozaga.exo.ShareExtension;
+				PRODUCT_NAME = SpectraShareExtension;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		4A8B8C9D10E11F1203040513 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = SpectraShareExtension/SpectraShareExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2P752VF3U7;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = SpectraShareExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.2.5;
+				OTHER_SWIFT_FLAGS = "$(inherited) -D EXPO_CONFIGURATION_RELEASE";
+				PRODUCT_BUNDLE_IDENTIFIER = org.spectramozaga.exo.ShareExtension;
+				PRODUCT_NAME = SpectraShareExtension;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		83CBBA201A601CBA00E9B192 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++20";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_BITCODE = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					/usr/lib/swift,
+					"$(inherited)",
+				);
+				LIBRARY_SEARCH_PATHS = "$(SDKROOT)/usr/lib/swift\"$(inherited)\"";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
+				SWIFT_ENABLE_EXPLICIT_MODULES = NO;
+				USE_HERMES = true;
+			};
+			name = Debug;
+		};
+		83CBBA211A601CBA00E9B192 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++20";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_BITCODE = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					/usr/lib/swift,
+					"$(inherited)",
+				);
+				LIBRARY_SEARCH_PATHS = "$(SDKROOT)/usr/lib/swift\"$(inherited)\"";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
+				SDKROOT = iphoneos;
+				SWIFT_ENABLE_EXPLICIT_MODULES = NO;
+				USE_HERMES = true;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C9D0E1F2011F1203040515 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = SpectraNotificationService/SpectraNotificationService.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2P752VF3U7;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = SpectraNotificationService/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.2.5;
+				OTHER_SWIFT_FLAGS = "$(inherited) -D EXPO_CONFIGURATION_DEBUG";
+				PRODUCT_BUNDLE_IDENTIFIER = org.spectramozaga.exo.NotificationService;
+				PRODUCT_NAME = SpectraNotificationService;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		C9D0E1F2011F1203040516 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = SpectraNotificationService/SpectraNotificationService.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2P752VF3U7;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = SpectraNotificationService/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.2.5;
+				OTHER_SWIFT_FLAGS = "$(inherited) -D EXPO_CONFIGURATION_RELEASE";
+				PRODUCT_BUNDLE_IDENTIFIER = org.spectramozaga.exo.NotificationService;
+				PRODUCT_NAME = SpectraNotificationService;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "Spectra" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13B07F941A680F5B00A75B9A /* Debug */,
+				13B07F951A680F5B00A75B9A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4A8B8C9D10E11F1203040512 /* Build configuration list for PBXNativeTarget "SpectraShareExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4A8B8C9D10E11F1203040511 /* Debug */,
+				4A8B8C9D10E11F1203040513 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C9D0E1F2011F1203040517 /* Build configuration list for PBXNativeTarget "SpectraNotificationService" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9D0E1F2011F1203040515 /* Debug */,
+				C9D0E1F2011F1203040516 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "Spectra" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83CBBA201A601CBA00E9B192 /* Debug */,
+				83CBBA211A601CBA00E9B192 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 83CBB9F71A601CBA00E9B192 /* Project object */;
+}

@@ -1,0 +1,9 @@
+{
+  "platforms": ["ios", "android"],
+  "ios": {
+    "modules": ["ExpoBlePeripheralModule"]
+  },
+  "android": {
+    "modules": ["expo.modules.bleperipheral.ExpoBlePeripheralModule"]
+  }
+}

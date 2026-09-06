@@ -1,0 +1,13 @@
+/*
+ * Copyright (c) 2026 MOZAGA FOUNDATION.
+ * SPDX-License-Identifier: AGPL-3.0-only OR LicenseRef-Spectra-Commercial
+ * See LICENSE.md, LICENSE-AGPL-3.0.txt, and LICENSE-COMMERCIAL.md for details.
+ */
+
+"NSBluetoothAlwaysUsageDescription" = "Spectra usa il Bluetooth per inviare e ricevere messaggi crittografati quando sei offline o vicino ai tuoi contatti.";
+"NSBluetoothPeripheralUsageDescription" = "Spectra usa il Bluetooth per consentire ai contatti vicini di trovarti e inviarti messaggi.";
+"NSCameraUsageDescription" = "Consenti a Spectra di accedere alla fotocamera per scansionare codici QR ed effettuare videochiamate.";
+"NSFaceIDUsageDescription" = "Consenti a Spectra di usare Face ID per uno sblocco sicuro.";
+"NSMicrophoneUsageDescription" = "Consenti a Spectra di accedere al microfono per chiamate vocali e video.";
+"NSPhotoLibraryUsageDescription" = "Spectra usa le foto della tua libreria così puoi inviarle nelle chat, impostare una foto del profilo o del gruppo, scegliere uno sfondo chat personalizzato o allegare screenshot quando segnali un problema. Ad esempio, puoi scegliere una foto dalla tua libreria per inviarla in una conversazione.";
+"NSPhotoLibraryAddUsageDescription" = "Spectra salva le immagini nella tua libreria fotografica quando scarichi una foto da una chat. Ad esempio, puoi salvare un'immagine ricevuta in Foto per conservarla su questo dispositivo.";

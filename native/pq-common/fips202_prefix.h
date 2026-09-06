@@ -1,0 +1,46 @@
+#ifndef SPECTRA_FIPS202_PREFIX_H
+#define SPECTRA_FIPS202_PREFIX_H
+
+/* Keep PQClean SHA3/SHAKE off Tor and OpenSSL's global namespace. */
+#define shake128_absorb PQCLEAN_shake128_absorb
+#define shake128_squeezeblocks PQCLEAN_shake128_squeezeblocks
+#define shake128_ctx_release PQCLEAN_shake128_ctx_release
+#define shake128_ctx_clone PQCLEAN_shake128_ctx_clone
+#define shake128_inc_init PQCLEAN_shake128_inc_init
+#define shake128_inc_absorb PQCLEAN_shake128_inc_absorb
+#define shake128_inc_finalize PQCLEAN_shake128_inc_finalize
+#define shake128_inc_squeeze PQCLEAN_shake128_inc_squeeze
+#define shake128_inc_ctx_clone PQCLEAN_shake128_inc_ctx_clone
+#define shake128_inc_ctx_release PQCLEAN_shake128_inc_ctx_release
+#define shake256_absorb PQCLEAN_shake256_absorb
+#define shake256_squeezeblocks PQCLEAN_shake256_squeezeblocks
+#define shake256_ctx_release PQCLEAN_shake256_ctx_release
+#define shake256_ctx_clone PQCLEAN_shake256_ctx_clone
+#define shake256_inc_init PQCLEAN_shake256_inc_init
+#define shake256_inc_absorb PQCLEAN_shake256_inc_absorb
+#define shake256_inc_finalize PQCLEAN_shake256_inc_finalize
+#define shake256_inc_squeeze PQCLEAN_shake256_inc_squeeze
+#define shake256_inc_ctx_clone PQCLEAN_shake256_inc_ctx_clone
+#define shake256_inc_ctx_release PQCLEAN_shake256_inc_ctx_release
+#define shake128 PQCLEAN_shake128
+#define shake256 PQCLEAN_shake256
+#define sha3_256_inc_init PQCLEAN_sha3_256_inc_init
+#define sha3_256_inc_absorb PQCLEAN_sha3_256_inc_absorb
+#define sha3_256_inc_finalize PQCLEAN_sha3_256_inc_finalize
+#define sha3_256_inc_ctx_clone PQCLEAN_sha3_256_inc_ctx_clone
+#define sha3_256_inc_ctx_release PQCLEAN_sha3_256_inc_ctx_release
+#define sha3_256 PQCLEAN_sha3_256
+#define sha3_384_inc_init PQCLEAN_sha3_384_inc_init
+#define sha3_384_inc_absorb PQCLEAN_sha3_384_inc_absorb
+#define sha3_384_inc_finalize PQCLEAN_sha3_384_inc_finalize
+#define sha3_384_inc_ctx_clone PQCLEAN_sha3_384_inc_ctx_clone
+#define sha3_384_inc_ctx_release PQCLEAN_sha3_384_inc_ctx_release
+#define sha3_384 PQCLEAN_sha3_384
+#define sha3_512_inc_init PQCLEAN_sha3_512_inc_init
+#define sha3_512_inc_absorb PQCLEAN_sha3_512_inc_absorb
+#define sha3_512_inc_finalize PQCLEAN_sha3_512_inc_finalize
+#define sha3_512_inc_ctx_clone PQCLEAN_sha3_512_inc_ctx_clone
+#define sha3_512_inc_ctx_release PQCLEAN_sha3_512_inc_ctx_release
+#define sha3_512 PQCLEAN_sha3_512
+
+#endif

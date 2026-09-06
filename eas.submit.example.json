@@ -1,0 +1,11 @@
+{
+  "submit": {
+    "production": {
+      "ios": {
+        "appleId": "your-apple-id@example.com",
+        "appleTeamId": "REPLACE_WITH_APPLE_TEAM_ID",
+        "ascAppId": "0000000000"
+      }
+    }
+  }
+}
